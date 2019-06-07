@@ -11,6 +11,6 @@ function App() {
       <Pet name="Doink" animal="Cat" breed="Mixed" />
     </div>
   );
-};
+}
 
 render(<App />, document.getElementById('root'));
