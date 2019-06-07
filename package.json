@@ -1,0 +1,24 @@
+{
+  "name": "learning-react",
+  "version": "5.0.0",
+  "description": "Notes and exercises of the \"Complete Intro to React\" Frontend Master course.",
+  "keywords": [],
+  "homepage": "https://github.com/Digznav/learning-react#readme",
+  "bugs": {
+    "url": "https://github.com/Digznav/learning-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Digznav/learning-react.git"
+  },
+  "license": "ISC",
+  "author": "Diego Miguel <digznav@gmail.com> (https://github.com/Digznav)",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}
