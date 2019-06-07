@@ -1,3 +1,15 @@
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Other files and folders
+*.DS_Store
+.*cache
+.*-cache
+.*_cache
+*.*.map
+psd/
+dist/
+coverage/
+.vscode/
+.env
