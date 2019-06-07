@@ -3,24 +3,14 @@ import { render } from 'react-dom';
 import Pet from './Pet';
 
 function App() {
-  return React.createElement('div', { id: 'something important' }, [
-    React.createElement('h1', {}, 'Adopt me !'),
-    React.createElement(Pet, {
-      name: 'Luna',
-      animal: 'dog',
-      breed: 'Mixed'
-    }),
-    React.createElement(Pet, {
-      name: 'Chewie',
-      animal: 'dog',
-      breed: 'Chihuahua'
-    }),
-    React.createElement(Pet, {
-      name: 'Doink',
-      animal: 'cat',
-      breed: 'Mixed'
-    })
-  ]);
+  return (
+    <div>
+      <h1 id="something-important">Adopt Me!</h1>
+      <Pet name="Luna" animal="Dog" breed="Mixed" />
+      <Pet name="Chewie" animal="Dog" breed="Chihuahua" />
+      <Pet name="Doink" animal="Cat" breed="Mixed" />
+    </div>
+  );
 };
 
-render(React.createElement(App), document.getElementById('root'));
+render(<App />, document.getElementById('root'));
