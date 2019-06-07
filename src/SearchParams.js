@@ -8,18 +8,30 @@ function SearchParams() {
   const [animal, AnimalDropdown] = useDropdown('Animal', 'dog', ANIMALS);
   const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
 
-  useEffect(() => {
-    setBreeds([]);
-    setBreed('');
+  useEffect(
+    function updateBreeds() {
+      setBreeds([]);
+      setBreed('');
 
-    pet
-      .breeds(animal)
-      .then(({ breeds }) => {
-        const breedNames = breeds.map(({ name }) => name);
-        setBreeds(breedNames);
-      })
-      .catch(console.error);
-  }, [animal, setBreed, setBreeds]);
+      // TODO: Check when animal is 'All'.
+      // `All` causes to API to fail.
+      console.log(animal);
+
+      pet
+        .breeds(animal)
+        .then(function updateBreedsState({ breeds = [] }) {
+          // API fails when `animal` is equal to `All`. Making `breeds` undefined.
+          // Using default value for now.
+          console.log(breeds);
+          const breedNames = breeds.map(function getBreedName({ name }) {
+            return name;
+          });
+          setBreeds(breedNames);
+        })
+        .catch(console.error);
+    },
+    [animal, setBreed, setBreeds]
+  );
 
   return (
     <div className="search-params">
