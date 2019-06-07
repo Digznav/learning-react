@@ -9,12 +9,15 @@
   ],
   "rules": {
     "react/prop-types": "off",
-    "no-console": "warn"
+    "no-console": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "plugins": [
     "react",
     "import",
-    "jsx-a11y"
+    "jsx-a11y",
+    "react-hooks"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
